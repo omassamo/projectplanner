@@ -14,8 +14,6 @@ Podio::setup($client_id, $client_secret);
 try {
   Podio::authenticate_with_app($app_id, $app_token);
 
-  echo('authenticate');
-
   // Authentication was a success, now you can start making API calls.
 
 }
@@ -27,11 +25,16 @@ catch (PodioError $e) {
 };
 
 // Retrieve data from app
-
 Podio::authenticate_with_app($app_id, $app_token);
 
-$allitems = PodioItem::filter($app_id);
+// All projects planning
+$planning = PodioItem::filter($app_id, array(
+	'limit' => 50,
+    'filters' => array(47262160 => 2),
+    // 'sort_by' => 'created_on',
+    ));
 
-echo($allitems);
+(print "# of projects planning "); print(count($planning));
+echo($planning);
 
 ?>
