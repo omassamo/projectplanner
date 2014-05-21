@@ -24,9 +24,6 @@ catch (PodioError $e) {
   // Something went wrong. Examine $e->body['error_description'] for a description of the error.
 };
 
-// Retrieve data from app
-Podio::authenticate_with_app($app_id, $app_token);
-
 // All projects in progress
 $inprogress = PodioItem::filter($app_id, array(
 	'limit' => 50,
