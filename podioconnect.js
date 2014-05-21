@@ -5,8 +5,8 @@ module.exports = {
 	stringify: require('querystring').stringify,
 	// API keys
 	client: {
-		client_id: "joha-cms-login", 
-		client_secret: "I33VfXvJuBk8DGbiBD32kFqc88naPgrCB3CVkNprwyQQ90DE1WAYZ44swX2xOgFu"
+		client_id: "projectplanner", 
+		client_secret: "LX6k53Q8oFf1e7eEOzCJ2KtKgELXrTiccsdjJoth4hA8O6wKuEjh8O8zoXmppaUV"
 	},
 	// Auth. Credentials
 	oauth: {
@@ -15,7 +15,7 @@ module.exports = {
 	},
 	// Podio Settings
 	config: {
-		production_domain: "joha.dk",
+		production_domain: "localhost",
 		org_id: 420066,
 		space_id: 1432315,
 		app_id: 7827995
