@@ -31,7 +31,7 @@ $planning = PodioItem::filter($app_id, array(
     // 'sort_by' => 'created_on',
     ));
 
-(print "# of projects planning "); print(count($planning));
+print(count($planning)); (print " projects planning ");
 echo($planning);
 
 ?>

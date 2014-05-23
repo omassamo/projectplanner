@@ -25,13 +25,8 @@ catch (PodioError $e) {
 };
 
 // All projects in progress
-$inprogress = PodioItem::filter($app_id, array(
-	'limit' => 50,
-    'filters' => array(47262160 => 3),
-    // 'sort_by' => 'created_on',
-    ));
+$test = PodioItem::get_app_values($app_id);
 
-print(count($inprogress)); (print " projects in progress ");
-echo($inprogress);
+echo json_encode($test);
 
 ?>

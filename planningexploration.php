@@ -24,14 +24,14 @@ catch (PodioError $e) {
   // Something went wrong. Examine $e->body['error_description'] for a description of the error.
 };
 
-// All projects in progress
-$inprogress = PodioItem::filter($app_id, array(
+// All projects planning
+$planning = PodioItem::filter($app_id, array(
 	'limit' => 50,
-    'filters' => array(47262160 => 3),
+    'filters' => array(47262160 => 2, 62242293 => 1),
     // 'sort_by' => 'created_on',
     ));
 
-print(count($inprogress)); (print " projects in progress ");
-echo($inprogress);
+print(count($planning)); (print " projects planning + planned phase Exploration ");
+echo($planning);
 
 ?>
